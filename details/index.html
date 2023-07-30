@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explicando REM</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="shortcut icon" href="screen-tag.gif"/>
+</head>
+<body>
+  <header>
+    
+    <h1>Unidades de medida Flexíveis : rem , em</h1>
+
+    <p> 
+      Ambas tem um tamanho variável, por isso é necessário fazer algumas contas para conseguir o tamanho necessário. Para entender nada melhor que partir para um exemplo.
+    </p>
+
+
+  </header>
+
+  <main>
+    <section>
+      <h3> 
+        <span>=></span>
+        Calculando EM
+        <br/>
+        <br/>
+        A fórmula para calcular valores EM é esta: <a href="#">target ÷ context = result</a>.
+        <br/> 
+        <br/> 
+        Onde:
+        <br/>
+        <strong>target</strong>: é o valor do próprio elemento.
+        <br/>  
+        <strong>context</strong>: é o contexto onde o elemento está inserido ( div pai ).
+        <br/>  
+        &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <strong>result</strong>: é o valor em EM.
+        <br/>
+        <br/>
+        <span>=></span>
+        A diferença do REM para o EM é o root 
+        <br/>
+        <br/>
+        pois nos cálculos para o REM a div pai sempre será o valor do font-size no seu navegador( context ) . 
+        <br/> 
+        E não um valor variável.
+        <br/>
+        <br/>
+        Logo , 1 rem = font-size do seu navegador / font-size do próprio elemento.
+        <br/>
+        <br/>
+        Supomos que o meu navegador esta configurado à ter font-size: 16px (context)
+        <br/>
+        <br/>
+        - e o meu elemento atual ( target) tenha font-size:16px 
+        <br/>
+        <br/>
+        -meu rem será 16/16 =  <span>1rem</span>;
+        <br/>
+        <br/>
+        Se caso meu elemento atual tivesse font-size : 200px 
+        <br/>
+        <br/>
+        - meu rem será    200/16  = <span>12,5rem</span>
+
+      </h3>
+    </section>
+
+    <section>
+      <p>
+          <strong>Primeiro exemplo</strong>
+          <br/>
+          <br/>
+          Vamos pegar um exemplo prático. Veja o código HTML abaixo:
+          <br/>
+          <br/>
+          -body-
+          <br/>
+            -p- Um texto aqui -/p-
+          <br/>
+          -/body-
+          <br/>
+          No CSS temos:
+          <br/>
+          <br/>
+          body {   font: 14px verdana, arial, tahoma, sans-serif; }
+          <br/>
+          p {      font-size: 18px;   }
+          <br/>
+          <br/>
+          <strong>Aplicando a fórmula</strong> 
+          <br/><br/>
+          para manter o mesmo tamanho da fonte em EM, temos:
+          <br/>
+          <br/>
+          18px / 14px = 1.28em
+          <br/>
+          Logo, podemos alterar o CSS do p para:
+          <br/>
+          <br/>
+          <span>p { font-size: 1.28em; }</span> 
+      </p>
+    </section>
+
+    <section>
+      <p>
+        <strong>Segundo exemplo</strong>
+          <br/>
+          <br/>
+          Vamos pegar outro exemplo prático mas agora, para REM. Veja o código HTML abaixo:
+          <br/>
+          <br/>
+          -body-
+          <br/>
+           &nbsp; &nbsp; &nbsp; &nbsp;-p- Um texto aqui -/p-
+          <br/>
+          -/body-
+          <br/>
+          No CSS temos:
+          <br/>
+          <br/>
+          body {   font: 14px verdana, arial, tahoma, sans-serif; }
+          <br/>
+          p {      font-size: 18px;   }
+          <br/>
+          <br/>
+          <strong>Aplicando a fórmula</strong> 
+          <br/><br/>
+          para manter o mesmo tamanho da fonte em REM, quando o navegador foi configurado para ter font-size : 16px temos:
+          <br/>
+          <br/>
+          14px / 16px = 0.875rem
+          <br/>
+          <br/>
+          18px / 16px = 1.125rem
+          <br/>
+          Logo, podemos alterar o CSS do p para:
+          <br/>
+          <br/>
+          <span>p { font-size: 0.874em; }</span>
+          <br/>
+          <br/>
+          <span>body { font-size: 1.125rem }</span>
+      </p>
+    </section>
+
+    <section>
+      <p>
+        <strong>Terceiro exemplo</strong>
+          <br/>
+          <br/>
+          Vamos pegar outro exemplo prático mas agora escolhendo o root (padronizando o percentual %  ), para REM. Veja o código HTML abaixo:
+          <br/>
+          <br/>
+          Padronizando o percentual %  que pego do font-size do navegador para resultar em  1rem = 10px 
+          <br/>
+          eu preciso descobrir quantos % eu preciso do font-size do navegador.
+          <br/>
+          Supomos o navegador ter 16px de font-size , eu preciso de apenas 10px . Logo quantos % de 16px eu preciso calcular para chegar nos 10px ?
+          <br/>
+          Quantos porcento de 16px será = 10px ?
+          <br/>
+          &nbsp; &nbsp; &nbsp; &nbsp;? &nbsp; &nbsp; &nbsp; &nbsp;% &nbsp; &nbsp; &nbsp; &nbsp;de &nbsp; &nbsp;16 &nbsp; &nbsp;= 10px     
+          <br/>
+          Encontramos isto fazendo o calculo     10/16 = 62,5 
+          <br/>
+          Logo, 62,5 %  de   16px  =  10px
+          <br/>
+          <br/>
+
+      </p>
+
+      <p>
+        <strong>Isso faz com que todo 1 rem seja = 10px</strong>
+        <br/>
+        <br/>
+        :root {
+        <br/>
+        &nbsp; &nbsp; &nbsp; &nbsp; font-size: 62.5%
+        <br/>
+        }
+        <br/>
+        No CSS temos:
+        <br/>
+        <br/>
+        body {   font: 14px verdana, arial, tahoma, sans-serif; }
+        <br/>
+        p {      font-size: 18px;   }
+        <br/>
+        <br/>
+        <strong>Aplicando a fórmula</strong> 
+        <br/><br/>
+        para manter o mesmo tamanho da fonte em REM, quando o navegador foi configurado para ter font-size : 16pxtemos:
+        <br/>
+        Lembra que o root é apenas 10px , logo no calculo so precisa voltar uma casa decimal de qualquer valor em pixel
+        <br/>
+        <br/>
+        14px / 10px = 1.4rem
+        <br/>
+        <br/>
+        18px / 10px = 1.8rem
+        <br/>
+        Logo, podemos alterar o CSS do p para:
+        <br/>
+        <br/>
+        <span>p { font-size: 1.4em; }</span>
+        <br/>
+        <br/>
+        <span>body { font-size: 1.8rem }</span>
+        <br>
+      </p>
+    </section>
+
+    <section>
+      <div class="exemplos-4-e-5">
+
+        <h3><strong>Exemplo prático de pagina html com ou sem :root no font-size</strong></h3>
+
+        <div class="exemplos-row">
+
+          <fieldset>
+            <legend>
+              <span>
+                <h4>
+                  Fléxivel
+                </h4>
+              </span>
+            </legend>
+            
+            <img alt="É uma imagem que representa a situação em que a font-size do navegador vai aumentando e o texto da pagina html acompanha a proporção , logo : é flexível" src=""/>
+            <a target="_blank" href="testarE4/index.html">
+              👉🏾link
+            </a>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <span>
+                <h4>Não Fléxivel</h4>
+              </span>
+            </legend>
+            
+            <img alt="É uma imagem que representa a situação em que a font-size do navegador vai aumentando e o texto da pagina html não acompanha a proporção , logo : não é flexível" src="testarE5/index.html"/>
+            <a target="_blank" href="testarE5/index.html">
+              👉🏾link
+            </a>
+          </fieldset>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+  <footer>
+    <strong>
+      Para mais detalhes click neste
+      <a target="_blank" href="https://receitasdecodigo.com.br/front-end/qual-unidade-de-medida-voce-usa-em-seu-css-px-em-ou-rem#:~:text=Unidade%20em%20REM,de%20body.">
+        link
+      </a>
+  </strong>
+  </footer>
+</body>
+</html>

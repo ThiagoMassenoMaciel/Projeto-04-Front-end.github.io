@@ -1,0 +1,12 @@
+Dentro denta pasta details futuramente eu colocarei uma calculadora de px para rem para em : target ÷ context = result.
+
+versao 1 
+
+eu digito os valores
+
+versao 2 
+pergunto para converter e eu envio o codigo html e css para o calculadora fazer sozinha
+
+versao 3 
+
+o app vai no navegador da pessoa e discobre a bonde do body AUTOMAÇÃO

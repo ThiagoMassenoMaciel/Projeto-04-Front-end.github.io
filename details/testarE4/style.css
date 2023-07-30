@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #bebefcbb;
+  color: #45455cbb;
+}
+
+:root{
+  font-size: 62.5%;
+  /*10px do default navegador utilizado*/
+}
+
+h1, h2 , h3 , h4{
+  font-size: 2.5rem;
+}
+
+footer{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 1.0rem;
+  margin: 1.0rem;
+
+  color: #fff;
+  background-color: #45455cbb;
+  font-size: 1.5rem;
+
+  gap: 1.5rem;
+}
+
+footer strong{
+  color: #ff0000;
+  font-size: 1.5rem;
+}
+/*
+
+    <!--<h3>E quando o elemento no html sem :root não tiver o font-size: definido,  acontece isso .</h3>-->
+
+footer h3{
+  font-size: auto;
+}
+
+*/

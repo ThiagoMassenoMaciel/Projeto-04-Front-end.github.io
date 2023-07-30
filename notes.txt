@@ -1,0 +1,52 @@
+[Fontes de texto usadas](https://fonts.google.com/share?selection.family=Epilogue:wght@400;700;800)
+
+
+
+uma coisa que percibi fazendo o projeto a + details foi que o h3 n funciona dentro de uma <p> personalizada
+
+futuro projeto : target ÷ context = result.
+talvez se tornar até uma extensão do vscode EU FAZENDO ELA
+
+  como irá ficar este font-weight : 400 no rem ? 
+  font-weight: normal;  ou font-weight:40rem   ?
+
+align-items: flex-start;
+|'`´
+align-items: flex-end;
+|... 
+align-items: center;
+|=
+
+
+
+usados 
+
+ul > li:nth-child(3){}
+
+h1 + p{}
+
+main p:first-child{}
+
+      :::Duvida porque o texto da ul li{ n continua crescendo ? } sendo que ela num sai do min-width : 144 mesmo quando esa no desktop ? 
+
+        :::Duvida e eu esqueci como ele fez para colocar uma div do lado da ul demorei 47' tentando fazer sem olhar o video e ainda so errei este pedaço da primeira dúvida
+.
+
+Ideias para os próximos projetos
+
+incorporar possíveis problemas na hora de ir fazendo os projetos igual aconteceu quando eu fui fazer este ]
+    
+    passei 1hora pra resolver isso 
+
+  :::N conseguia fazer com que a frase do numeros estivessem em apenas uma linha depois da viewport ultrapassar a largura máxima do main 1020px
+  : pois o max-width do main deveria ser 1359px ou 90% E NÃO só o que tinha - do jeito que estava truncava a ul pra ter no máximo 114px de largura empedindo da <li> de ter suas 418px necessários para mostrar toda a frase
+  Antes eu n conseguia fazer com que a frase ao lado do numero ficasse em apenas uma linha 
+  pois sua caixa avô MAIN tinha um max-width menor que o necessário para exibir a caixinha li de  417px
+
+
+  antes o antigo max-width do AVÔ era 1021px  
+  com isso a caixa dele n permitia que a outra 
+  caixinha neta <li> tivesse a largura suficiente para exibir toda a frase em apenas uma linha
+
+  mudar para 90% ou o tamanho ideal que permita <li> exibir a frase em só uma row
+  1359px é o tamanho de largura minima para aparecer toda a frase em apenas uma linha

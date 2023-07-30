@@ -1,0 +1,178 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body #a ,img{
+  position: fixed;
+  bottom: 2.0rem;
+  right: 2.0rem;
+
+  border-radius: 2.0rem;
+  border: 1.0rem solid #7158EF;
+  width: 7.2rem;
+  height: 7.2rem;
+}
+
+body{
+  background-color: #ECE9FD;
+
+  padding: 6.0rem 2.3rem 6.6rem;
+
+  font-family: 'Epilogue', sans-serif;
+}
+
+/* vai selecionar todos os filhos de main
+main:first-child{
+  color: #7158EF;
+}
+*/
+
+main p:first-child{
+  color: #7158EF;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 3.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+}
+
+main h1{
+  color: #090039;
+
+  font-size: 4.0rem;
+  line-height: 4.8rem;
+  font-weight: 800;
+
+  margin: 1.7rem 0rem 1.5rem;
+
+
+}
+
+h1 + p{
+  color: rgba(10, 0, 57, 0.64);
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+
+  margin-bottom: 3.2rem;
+}
+
+main #A{
+  color: #060029;
+
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 3.2rem;
+  text-decoration: none;
+}
+main #A:hover{
+  color:  #030011;
+  font-weight: bold;
+}
+
+ul{
+  margin: 7.2rem auto 0;
+  gap: 3.2rem;
+
+}
+
+ul li{
+  color: #090039;
+
+  list-style: none;
+
+  max-width: 25.7rem;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+
+  display: flex;
+  align-items: center;
+
+}
+
+ul >li:nth-child(1){
+  gap: 3.8rem;
+}
+
+ul >li:nth-child(2){
+  gap: 2.6rem;
+}
+
+ul > li:nth-child(3){
+  gap: 2.5rem;
+}
+
+ul li span{
+
+  font-size: 7.2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 8.0rem;
+  letter-spacing: -2px;
+
+  color: inherit;
+
+}
+
+main{
+  max-width: 33.0rem;   /*o cara do curso arredondou o que antes era 32.9rem;*/
+  height: 74.4rem;
+  margin: 0 auto;
+
+  color: #090039;
+}
+
+
+@media (min-width: 700px){
+  body{
+    max-width: 1440px;
+    margin: 0px auto;
+  }
+
+  main{
+    max-width: 1359px;  /*esta parte me causou mts problemas*/
+    padding: 8rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 11.6rem;
+  }
+
+  main > section{
+    max-width: 484px;
+  }
+
+  ul li{
+ /* min-width: 14.4rem;   */
+    max-width: 450px;
+  }
+
+  ul li + li {
+    margin-top: 3.2rem;
+  }
+
+  ul li:nth-child(1){
+    gap: 6.6rem;
+  }
+
+  ul li:nth-child(2){
+    gap: 5.4rem;
+  }
+
+  ul li:nth-child(3){
+    gap: 5.3rem;
+
+  }
+
+}
